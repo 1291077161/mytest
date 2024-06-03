@@ -1,0 +1,242 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.4</version>
+        <relativePath/> <!-- lookup parent from repository -->
+    </parent>
+    <groupId>com.example</groupId>
+    <artifactId>demo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+    <name>demo</name>
+    <description>Demo project for Spring Boot</description>
+    <properties>
+        <java.version>1.8</java.version>
+    </properties>
+    <dependencies>
+
+
+
+
+
+        <dependency>
+            <groupId>com.lmax</groupId>
+            <artifactId>disruptor</artifactId>
+            <version>3.4.4</version>
+        </dependency>
+
+
+
+        <!--<dependency>-->
+        <!--    <groupId>org.postgresql</groupId>-->
+        <!--    <artifactId>postgresql</artifactId>-->
+        <!--    <scope>runtime</scope>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <optional>true</optional>
+        </dependency>
+
+        <!--<dependency>-->
+        <!--    <groupId>com.github.ben-manes.caffeine</groupId>-->
+        <!--    <artifactId>caffeine</artifactId>-->
+        <!--    <version>3.1.0</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-core</artifactId>
+            <version>5.8.18</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.github.ben-manes.caffeine</groupId>
+            <artifactId>caffeine</artifactId>
+            <version>2.9.3</version>
+        </dependency>
+
+
+        <dependency>
+            <groupId>org.springblade</groupId>
+            <artifactId>blade-core-tool</artifactId>
+            <version>2.9.0.RELEASE</version>
+        </dependency>
+
+        <!--<dependency>-->
+        <!--    <groupId>com.sailheader.mes</groupId>-->
+        <!--    <artifactId>mes-common</artifactId>-->
+        <!--    <version>1.0.0</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>com.sailheader.mes</groupId>
+            <artifactId>mes-common</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
+        <!--<dependency>-->
+        <!--    <groupId>io.swagger</groupId>-->
+        <!--    <artifactId>swagger-annotations</artifactId>-->
+        <!--    <version>1.6.8</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+        <!--    <groupId>org.springframework.boot</groupId>-->
+        <!--    <artifactId>spring-boot-starter-test</artifactId>-->
+        <!--    <scope>test</scope>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-web</artifactId>
+            <version>2.5.4</version>
+        </dependency>
+
+        <!--<dependency>-->
+        <!--    <groupId>com.baomidou</groupId>-->
+        <!--    <artifactId>mybatis-plus-boot-starter</artifactId>-->
+        <!--    <version>3.5.2</version>-->
+        <!--</dependency>-->
+
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+            <version>1.2.4</version>
+        </dependency>
+
+        <!--<dependency>-->
+        <!--    <groupId>com.yomahub</groupId>-->
+        <!--    <artifactId>liteflow-spring-boot-starter</artifactId>-->
+        <!--    <version>2.10.5</version>-->
+        <!--</dependency>-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>easyexcel</artifactId>
+            <version>2.2.10</version>
+        </dependency>
+
+        <!--<dependency>-->
+        <!--    <groupId>org.springframework.boot</groupId>-->
+        <!--    <artifactId>spring-boot-starter-data-redis</artifactId>-->
+        <!--    <version>2.2.0.RELEASE</version>-->
+        <!--</dependency>-->
+
+
+
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>1.8.3</version>
+        </dependency>
+
+
+        <!--<dependency>-->
+
+        <!--    <groupId>org.springblade</groupId>-->
+        <!--    <artifactId>blade-starter-swagger</artifactId>-->
+        <!--</dependency>-->
+
+
+        <!--<dependency>-->
+        <!--    <groupId>org.apache.rocketmq</groupId>-->
+        <!--    <artifactId>rocketmq-spring-boot-starter</artifactId>-->
+        <!--    <version>2.2.0</version>-->
+        <!--</dependency>-->
+
+        <!--<dependency>-->
+        <!--    <groupId>org.apache.poi</groupId>-->
+        <!--    <artifactId>poi</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--    <groupId>org.apache.poi</groupId>-->
+        <!--    <artifactId>poi-ooxml</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--    <groupId>org.springblade</groupId>-->
+        <!--    <artifactId>blade-starter-excel</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--    <groupId>org.springblade</groupId>-->
+        <!--    <artifactId>blade-core-cloud</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--    <groupId>com.xuxueli</groupId>-->
+        <!--    <artifactId>xxl-job-core</artifactId>-->
+        <!--    <version>2.3.1</version>-->
+        <!--</dependency>-->
+
+
+        <!--<dependency>-->
+        <!--    <groupId>com.yomahub</groupId>-->
+        <!--    <artifactId>liteflow-script-graaljs</artifactId>-->
+        <!--    <version>2.10.5</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--    <groupId>io.swagger</groupId>-->
+        <!--    <artifactId>swagger-annotations</artifactId>-->
+        <!--    <version>1.6.8</version>-->
+        <!--    <scope>test</scope>-->
+        <!--</dependency>-->
+
+
+    </dependencies>
+
+
+
+
+    <repositories>
+        <repository>
+            <id>aliyun-repos</id>
+            <url>https://maven.aliyun.com/repository/public/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>artifactory</id>
+            <name>your local artifactory</name>
+            <url>http://dev2.sailheader.com:8081/artifactory/libs-release-local</url>
+        </repository>
+    </repositories>
+    <pluginRepositories>
+        <pluginRepository>
+            <id>aliyun-plugin</id>
+            <url>https://maven.aliyun.com/repository/public/</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+        <pluginRepository>
+            <id>artifactory</id>
+            <name>your local artifactory</name>
+            <url>http://dev2.sailheader.com:8081/artifactory/plugins-release-local</url>
+            <snapshots>
+                <enabled>false</enabled>
+            </snapshots>
+        </pluginRepository>
+    </pluginRepositories>
+
+
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <excludes>
+                        <exclude>
+                            <groupId>org.projectlombok</groupId>
+                            <artifactId>lombok</artifactId>
+                        </exclude>
+                    </excludes>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>

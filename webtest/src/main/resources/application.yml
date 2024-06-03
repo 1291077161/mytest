@@ -1,0 +1,21 @@
+server:
+  port: 8989
+#spring:
+#  datasource:
+#    driver-class-name: org.postgresql.Driver
+#    url: jdbc:postgresql://localhost:5432/postgres?currentSchema=public
+#    username: postgres
+#    password: root
+
+  banner:
+    charset: UTF-8
+    image:
+      location: banner.txt
+
+#mybatis-plus:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#liteflow:
+#  rule-source: config/flow.el.xml
+
