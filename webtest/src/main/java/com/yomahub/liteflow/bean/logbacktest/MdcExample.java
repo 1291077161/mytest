@@ -19,8 +19,9 @@ public class MdcExample {
 
 			@Override
 			public void run() {
-				logger.info("AAAA This is a log message with userId={} and requestId={}, thread is :{}", MDC.get("userId"), MDC.get("requestId"),Thread.currentThread().getName());
+				// logger.info("AAAA This is a log message with userId={} and requestId={}, thread is :{}", MDC.get("userId"), MDC.get("requestId"),Thread.currentThread().getName());
 
+				System.out.println("AAAA This is a log message with userId={} and requestId={}, thread is :{}");
 				// super.run();
 			}
 		}.start();
@@ -35,6 +36,7 @@ public class MdcExample {
 
 		// 输出日志
 		logger.info("This is a log message with userId={} and requestId={}, thread is :{}", MDC.get("userId"), MDC.get("requestId"), Thread.currentThread().getName());
+		// System.out.println("aaaaa");
 
 
 		// 清除MDC属性
