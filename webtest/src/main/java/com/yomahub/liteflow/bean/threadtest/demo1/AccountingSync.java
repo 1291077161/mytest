@@ -1,4 +1,10 @@
 package com.yomahub.liteflow.bean.threadtest.demo1;
+/**
+ *
+ * @author Joy
+ * @date 2024/6/13
+ *
+ */
 
 public class AccountingSync implements Runnable {
 	static AccountingSync instance = new AccountingSync();
