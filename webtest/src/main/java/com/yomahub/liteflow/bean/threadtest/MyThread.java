@@ -18,6 +18,9 @@ public class MyThread extends Thread {
 		Thread t1 = new Thread(thread);
 		Thread t2 = new Thread(thread);
 
+		// Thread t1 = new Thread(new MyThread());
+		// Thread t2 = new Thread(new MyThread());
+
 		t1.start();
 		t2.start();
 
