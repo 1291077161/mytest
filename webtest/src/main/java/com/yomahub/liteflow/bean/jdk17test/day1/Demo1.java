@@ -1,5 +1,8 @@
 package com.yomahub.liteflow.bean.jdk17test.day1;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+
 import java.util.List;
 
 
@@ -7,13 +10,15 @@ import java.util.List;
  *
  * @author Joy
  * @date 2024/6/14
- * @param
  *
  */
 
+@Data
+@AllArgsConstructor
 public class Demo1 {
 
 	public static void main(String[] args) {
+
 
 		try {
 			//简单的空指针
