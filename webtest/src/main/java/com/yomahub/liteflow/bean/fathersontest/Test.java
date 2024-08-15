@@ -1,5 +1,10 @@
 package com.yomahub.liteflow.bean.fathersontest;
 
+import lombok.Data;
+import lombok.Getter;
+
+import java.util.List;
+
 public class Test {
 	public static void main(String[] args) {
 		Zi zi = new Zi(10, "20");
@@ -14,8 +19,16 @@ public class Test {
 }
 
 
+@Data
+@Getter
 class Fu {
-	int num;   //10
+	private int num;   // 10
+
+	private String s1;
+
+	public String s2;
+
+	public List<String> strings;
 
 	public Fu() {
 		System.out.println("父类无参构造");
@@ -31,9 +44,18 @@ class Fu {
 
 }
 
+@Data
+@Getter
 class Zi extends Fu {
-	//20
+	// 20
 	// String num;
+	private int num;
+
+	private String s1;
+
+	public String s2;
+
+	public List<String> strings;
 
 	public Zi() {
 		// this(1,2);
@@ -41,13 +63,13 @@ class Zi extends Fu {
 		System.out.println("子类无参构造");
 	}
 
-	//同时给子类和父类的成员变量赋值
+	// 同时给子类和父类的成员变量赋值
 	public Zi(int fuNum, String ziNum) {
 
 		// this.num = 100;
 
 
-		//这里已经手动调用了父类的有参构造方法  所以不会调用父类的无参构造
+		// 这里已经手动调用了父类的有参构造方法  所以不会调用父类的无参构造
 		// this.show();
 		// super();
 		// super(fuNum);
@@ -90,7 +112,7 @@ class Zi extends Fu {
 		//         return null;
 		//     }
 		// }
-		System.out.println("父类的num:" + super.num);
+		// System.out.println("父类的num:" + super.num);
 		System.out.println("子类的num:" + this.num);
 		// this.show();
 
@@ -98,16 +120,16 @@ class Zi extends Fu {
 
 
 	public void test() {
-		//final修饰基本类型，只能一次赋值以后不能被修改
+		// final修饰基本类型，只能一次赋值以后不能被修改
 		final int num;
 
-		//等价于final int num = 1;
+		// 等价于final int num = 1;
 		num = 1;
 		System.out.println(num);
 		// 异常
 		// num = 2;
 
-		//final修饰引用类型，引用类型地址值不能再改变，即不能再次执行new操作；引用类型的值可以改变。
+		// final修饰引用类型，引用类型地址值不能再改变，即不能再次执行new操作；引用类型的值可以改变。
 		final int[] nums = new int[2];
 		nums[0] = 1;
 		nums[1] = 2;

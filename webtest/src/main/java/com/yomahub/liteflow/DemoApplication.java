@@ -105,6 +105,12 @@ public class DemoApplication {
 
 
 	public static void main(String[] args) throws IOException, InterruptedException {
+		Class<?> demoApplicationClass = DemoApplication.class;
+		// new Class[]{demoApplicationClass}
+		// Class[] classes = {demoApplicationClass};
+		// Thread[] threads1 = new Thread[];
+
+
 		SpringApplication.run(DemoApplication.class, args);
 		Set<ShopDetailLinks> links = new HashSet<>();
 		List<ShopInfo> shopInfos = new ArrayList<ShopInfo>();
