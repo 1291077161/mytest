@@ -2,8 +2,6 @@ package com.yomahub.liteflow.bean.threadtest.juctest.retrant;
 
 import lombok.extern.slf4j.Slf4j;
 
-import java.util.ArrayList;
-import java.util.List;
 import java.util.concurrent.LinkedBlockingQueue;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
@@ -36,6 +34,8 @@ public class Demo1 {
 				} catch (InterruptedException e) {
 					throw new RuntimeException(e);
 				}
+				boolean heldByCurrentThread = REENTRANT_LOCK.isHeldByCurrentThread();
+				System.out.println("heldByCurrentThread = " + heldByCurrentThread);
 				log.info("thread current current is : {}, queue length is :{}", Thread.currentThread().getName(), REENTRANT_LOCK.getQueueLength());
 				REENTRANT_LOCK.unlock();
 				REENTRANT_LOCK.unlock();
@@ -45,32 +45,10 @@ public class Demo1 {
 		}
 
 		TimeUnit.SECONDS.sleep(40);
-		// EXECUTOR.shutdownNow();
-
 
 		TimeUnit.SECONDS.sleep(5);
 		log.info("thread pool is terminate:{}", EXECUTOR.isTerminated());
-
-
-		Runnable runnable = new Runnable() {
-			@Override
-			public void run() {
-
-			}
-		};
-
-
-		List<String> strings = new ArrayList<>();
-		strings.add("111");
-		strings.add("222");
-		strings.add("222");
-
-
-		strings.get(2);
-
-
-		int[] arr = null;
-
+		EXECUTOR.shutdownNow();
 
 	}
 

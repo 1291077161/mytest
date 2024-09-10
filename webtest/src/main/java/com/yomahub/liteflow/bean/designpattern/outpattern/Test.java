@@ -1,4 +1,4 @@
-package com.yomahub.liteflow.bean.outpattern;
+package com.yomahub.liteflow.bean.designpattern.outpattern;
 
 public class Test {
 	public static void main(String[] args) {

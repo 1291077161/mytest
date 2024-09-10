@@ -1,4 +1,4 @@
-package com.yomahub.liteflow.bean.outpattern;
+package com.yomahub.liteflow.bean.designpattern.outpattern;
 
 public interface IMedium {
 	/**
