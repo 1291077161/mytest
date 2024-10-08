@@ -7,24 +7,20 @@ public class ObjectWait {
 
     public static void main(String[] args) {
         Object o = new Object();
-
-
-        Thread t = new Thread(new Runnable() {
-            @Override
-            public void run() {
-
-                System.out.println("线程A被o.wait()阻塞前");
-                synchronized(o){
-                    try {
-                        o.wait();
-                    } catch (InterruptedException e) {
-                        e.printStackTrace();
-                    }
-
+        Thread t = new Thread(() -> {
+            // o.wait();
+            System.out.println("线程A被o.wait()阻塞前");
+            synchronized(o){
+                try {
+                    o.notify();
+                    o.wait();
+                } catch (Exception e) {
+                    e.printStackTrace();
                 }
-                System.out.println("线程A被线程B o.notify()唤醒");
 
             }
+            System.out.println("线程A被线程B o.notify()唤醒");
+
         },"A");
 
         t.start();
@@ -37,15 +33,17 @@ public class ObjectWait {
         }
 
         // new Thread(new Runnable() {
+        //     @SneakyThrows
         //     @Override
         //     public void run() {
         //         System.out.println("线程B唤醒线程A");
-        //         synchronized (o){
-        //             o.notify();
+        //         synchronized (o) {
+        //             o.wait();
         //         }
+        //         System.out.println("线程B执行了");
         //     }
-        // },"B").start();
+        // }, "B").start();
 
-        o.notifyAll();
+        // o.notifyAll();
     }
 }

@@ -1,5 +1,6 @@
 package com.yomahub.liteflow.bean.threadtest.demo2;
 
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
@@ -17,8 +18,9 @@ public class ConditionAwait {
             public void run() {
                 System.out.println("线程A被condition.await()阻塞前");
                 try {
+                    TimeUnit.SECONDS.sleep(1);
                     lock.lock();
-                    condition.signal();
+                    condition.await();
                 } catch (Exception e) {
                     e.printStackTrace();
                 } finally {
@@ -34,11 +36,13 @@ public class ConditionAwait {
             public void run() {
                 try {
                     lock.lock();
+                    // TimeUnit.SECONDS.sleep(1);
                     System.out.println("线程B中使用condition.signal()唤醒线程A");
-                    condition.await();
+                    condition.signal();
                 } catch (Exception e) {
                 } finally {
                     lock.unlock();
+                    System.out.println("线程B释放锁了");
                 }
             }
         }, "B").start();

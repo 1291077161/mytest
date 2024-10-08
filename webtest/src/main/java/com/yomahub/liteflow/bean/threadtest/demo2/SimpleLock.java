@@ -2,6 +2,7 @@ package com.yomahub.liteflow.bean.threadtest.demo2;
 
 import lombok.extern.slf4j.Slf4j;
 
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;
 
 /**
@@ -41,14 +42,14 @@ public class SimpleLock {
         }
     }
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         SimpleLock lock = new SimpleLock();
 
         Runnable task = () -> {
             lock.lock();
             try {
                 System.out.println(Thread.currentThread().getName() + " acquired the lock.");
-                Thread.sleep(2000);
+                // Thread.sleep(2000);
             } catch (Exception e) {
                 e.printStackTrace();
             } finally {
@@ -61,6 +62,7 @@ public class SimpleLock {
         Thread t2 = new Thread(task, "Thread-2");
 
         t1.start();
+        TimeUnit.SECONDS.sleep(1);
         t2.start();
     }
 }
